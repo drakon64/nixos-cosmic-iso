@@ -14,8 +14,8 @@ jobs:
       - uses: cachix/install-nix-action@v26
         with:
           extra_nix_config: |
-            cores = 0
-            max-jobs = auto
+            cores = 1
+            max-jobs = 1
 
       - uses: cachix/cachix-action@v14
         with:
