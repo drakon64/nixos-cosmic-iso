@@ -26,9 +26,9 @@ jobs:
           USER: root
 
       - run: nix build .#nixosConfigurations.cosmic.config.system.build.isoImage
-        working-directory: cosmic-arm
+        working-directory: cosmic-aarch64
 
       - uses: actions/upload-artifact@v4.3.3
         with:
-          path: cosmic-arm/result/iso/*.iso
+          path: cosmic-aarch64/result/iso/*.iso
           compression-level: 0
