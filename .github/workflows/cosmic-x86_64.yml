@@ -1,5 +1,7 @@
 name: "COSMIC x86_64 Live ISO"
 on:
+  schedule:
+    - cron: "0 22 * * *"
   workflow_dispatch:
 
 jobs:
