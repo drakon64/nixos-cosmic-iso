@@ -1,0 +1,30 @@
+name: "COSMIC x86_64 Live ISO"
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4.1.4
+
+      - uses: cachix/install-nix-action@v26
+        with:
+          extra_nix_config: |
+            cores = 0
+            max-jobs = auto
+
+      - uses: cachix/cachix-action@v14
+        with:
+          name: drakon64-nixos-cosmic-iso
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+          extraPullNames: cosmic
+
+      - run: nix build .#nixosConfigurations.cosmic.config.system.build.isoImage
+        working-directory: cosmic-x86_64
+
+      - uses: actions/upload-artifact@v4.3.3
+        with:
+          path: cosmic-x86_64/result/iso/*.iso
+          compression-level: 0
