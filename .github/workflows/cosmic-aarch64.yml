@@ -1,7 +1,11 @@
 name: "COSMIC AArch64 Live ISO"
 on:
-#  schedule:
-#    - cron: "0 22 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - cosmic-aarch64/flake.lock
+      - cosmic-aarch64/*.nix
   workflow_dispatch:
 
 jobs:

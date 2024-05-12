@@ -1,7 +1,11 @@
 name: "COSMIC x86_64 Live ISO"
 on:
-  schedule:
-    - cron: "0 22 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - cosmic-x86_64/flake.lock
+      - cosmic-x86_64/*.nix
   workflow_dispatch:
 
 jobs:
