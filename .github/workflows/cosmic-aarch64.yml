@@ -6,6 +6,7 @@ on:
     paths:
       - cosmic-aarch64/flake.lock
       - cosmic-aarch64/*.nix
+      - .github/workflows/cosmic-aarch64.yml
   workflow_dispatch:
 
 jobs:
