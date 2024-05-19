@@ -35,13 +35,6 @@
       cosmic-greeter.enable = true;
     };
 
-    xserver = {
-      excludePackages = [ pkgs.xterm ];
-      videoDrivers = [ "virtualbox" "vmware" "cirrus" "vesa" "modesetting" ];
-    };
+    xserver.excludePackages = [ pkgs.xterm ];
   };
-
-  users.users.nixos.extraGroups = [ "vboxsf" ];
-
-  virtualisation.virtualbox.guest.enable = lib.mkForce true;
 }
