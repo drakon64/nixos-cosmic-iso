@@ -27,8 +27,6 @@ jobs:
           name: drakon64-nixos-cosmic-iso
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
           extraPullNames: cosmic
-        env:
-          USER: root
 
       - run: nix build .#nixosConfigurations.cosmic.config.system.build.isoImage
         working-directory: cosmic-aarch64
