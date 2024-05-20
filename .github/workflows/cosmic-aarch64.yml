@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: [linux, ARM64, EC2-R7gLarge]
+    runs-on: [linux, ARM64, EC2-r7g.large]
 
     steps:
       - uses: actions/checkout@v4.1.4
