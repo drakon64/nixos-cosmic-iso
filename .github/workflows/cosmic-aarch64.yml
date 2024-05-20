@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: codebuild-nixos-cosmic-iso-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: [linux, ARM64]
 
     steps:
       - uses: actions/checkout@v4.1.4
