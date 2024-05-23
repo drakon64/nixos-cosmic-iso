@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: [linux, ARM64, drakon64/github-actions-runner-aws, EC2-r7g.large]
+    runs-on: [linux, ARM64, drakon64/github-actions-runner-aws, EC2-r7g.large, EBS-30GB]
 
     steps:
       - uses: actions/checkout@v4.1.4
