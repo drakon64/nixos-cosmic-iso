@@ -3,11 +3,11 @@
     "flake-compat": {
       "flake": false,
       "locked": {
-        "lastModified": 1688025799,
-        "narHash": "sha256-ktpB4dRtnksm9F5WawoIkEneh1nrEvuxb5lJFt1iOyw=",
+        "lastModified": 1717312683,
+        "narHash": "sha256-FrlieJH50AuvagamEvWMIE6D2OAnERuDboFDYAED/dE=",
         "owner": "nix-community",
         "repo": "flake-compat",
-        "rev": "8bf105319d44f6b9f0d764efa4fdef9f1cc9ba1c",
+        "rev": "38fd3954cf65ce6faf3d0d45cd26059e059f07ea",
         "type": "github"
       },
       "original": {
@@ -23,11 +23,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1717307147,
-        "narHash": "sha256-3NqQEp/IGcfezIOqGCGPwvuhpy6lS276A7RbsljZtw8=",
+        "lastModified": 1717378559,
+        "narHash": "sha256-mG2Hby3CBqxA9jWPeRvspRmhjAzvRySEYE/zeN442TA=",
         "owner": "lilyinstarlight",
         "repo": "nixos-cosmic",
-        "rev": "f64623837e9089d873be7ff6f7a7ab45bada9a74",
+        "rev": "1e8eb08b9c70ae11f7c706fc8295f343e7732d2b",
         "type": "github"
       },
       "original": {
