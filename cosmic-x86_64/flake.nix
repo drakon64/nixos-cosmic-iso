@@ -3,7 +3,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nixos-cosmic = {
-      url = "github:lilyinstarlight/nixos-cosmic";
+      url = "github:diegobfernandez/nixos-cosmic/stable";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
