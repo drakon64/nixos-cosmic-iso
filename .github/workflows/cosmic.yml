@@ -39,8 +39,13 @@ jobs:
           SYSTEM: ${{ matrix.architecture.system }}
         run: nix -vL build --system "$SYSTEM" .#cosmicIso.closure
 
+      - run: |
+          ISO_FILE=(result/iso/*.iso)
+          echo ISO_FILE=$ISO_FILE >> $GITHUB_ENV
+          echo ISO_NAME=$(echo "$ISO_FILE" | sed -e 's/result\/iso\///' -e 's/.iso$//') >> $GITHUB_ENV
+
       - uses: actions/upload-artifact@v4
         with:
-          name: nixos-cosmic-iso-${{ matrix.architecture.name }}
-          path: result/iso/*.iso
+          name: ${{ env.ISO_NAME }}
+          path: ${{ env.ISO_FILE }}
           compression-level: 0
