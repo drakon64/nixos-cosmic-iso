@@ -41,5 +41,6 @@ jobs:
 
       - uses: actions/upload-artifact@v4.3.3
         with:
+          name: nixos-cosmic-iso-${{ matrix.architecture.name }}
           path: result/iso/*.iso
           compression-level: 0
