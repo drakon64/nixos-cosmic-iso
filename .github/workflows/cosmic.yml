@@ -39,7 +39,7 @@ jobs:
           SYSTEM: ${{ matrix.architecture.system }}
         run: nix -vL build --system "$SYSTEM" .#cosmicIso.closure
 
-      - uses: actions/upload-artifact@v4.3.3
+      - uses: actions/upload-artifact@v4.3.4
         with:
           path: result/iso/*.iso
           compression-level: 0
