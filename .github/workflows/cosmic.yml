@@ -4,8 +4,8 @@ on:
     branches:
       - main
     paths:
+      - flake.nix
       - flake.lock
-      - "*.nix"
       - .github/workflows/cosmic.yml
   workflow_dispatch:
 
@@ -17,9 +17,9 @@ jobs:
           - system: x86_64-linux
             runner: ubuntu-latest
             name: x86_64
-#          - system: aarch64-linux
-#            runner: [ linux, ARM64, drakon64/github-actions-runner-aws, EC2-r7g.large, EBS-30GB ]
-#            name: AArch64
+          - system: aarch64-linux
+            runner: [ linux, ARM64, drakon64/github-actions-runner-aws, EC2-r7g.large, EBS-30GB ]
+            name: AArch64
 
     name: COSMIC ${{ matrix.architecture.name }} Live ISO
     runs-on: ${{ matrix.architecture.runner }}
