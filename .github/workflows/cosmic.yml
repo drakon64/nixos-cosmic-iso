@@ -6,7 +6,12 @@ on:
     paths:
       - flake.nix
       - flake.lock
-      - .github/workflows/cosmic.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - flake.nix
+      - flake.lock
   workflow_dispatch:
 
 jobs:
