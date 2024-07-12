@@ -1,0 +1,45 @@
+name: "COSMIC Live ISO"
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - flake.lock
+      - "*.nix"
+      - .github/workflows/cosmic.yml
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        architecture:
+          - system: x86_64-linux
+            runner: ubuntu-latest
+            name: x86_64
+#          - system: aarch64-linux
+#            runner: [ linux, ARM64, drakon64/github-actions-runner-aws, EC2-r7g.large, EBS-30GB ]
+#            name: AArch64
+
+    name: COSMIC ${{ matrix.architecture.name }} Live ISO
+    runs-on: ${{ matrix.architecture.runner }}
+
+    steps:
+      - uses: actions/checkout@v4.1.4
+
+      - uses: cachix/install-nix-action@v26
+
+      - uses: cachix/cachix-action@v14
+        with:
+          name: drakon64-nixos-cosmic-iso
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+          extraPullNames: cosmic
+
+      - env:
+          SYSTEM: ${{ matrix.architecture.system }}
+        run: nix -vL build --system "$SYSTEM" .#cosmicIso.closure
+
+      - uses: actions/upload-artifact@v4.3.3
+        with:
+          path: result/iso/*.iso
+          compression-level: 0
