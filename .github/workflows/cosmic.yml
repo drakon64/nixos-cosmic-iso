@@ -54,3 +54,4 @@ jobs:
           name: ${{ env.ISO_NAME }}
           path: ${{ env.ISO_FILE }}
           compression-level: 0
+          if-no-files-found: error
