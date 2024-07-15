@@ -24,11 +24,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1720874643,
-        "narHash": "sha256-iNazPqYxw48WNSGs/9zs0w7fS5oSYkVtGKYweobCvEw=",
+        "lastModified": 1720954345,
+        "narHash": "sha256-JPYXcIpl7+UMIcDQ6JJMasCMusKBbFaADci9eAdt3JA=",
         "owner": "drakon64",
         "repo": "nixos-cosmic",
-        "rev": "3ef0ba18b548fc8a643bb49c8c003935e8d55be2",
+        "rev": "da59000afdf54eeb330b169fca27ef99327c640b",
         "type": "github"
       },
       "original": {
