@@ -30,4 +30,4 @@ jobs:
         if: ${{ contains(fromJSON('["created", "updated"]'), steps.update-flake-lock.outputs.pull-request-operation) }}
         with:
           workflow: cosmic.yml
-          ref: refs/heads/update_flake_lock_action
+          ref: refs/heads/ac652952b2badccf2d81413ed14ae7ff89190ae1
