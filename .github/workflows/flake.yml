@@ -1,9 +1,14 @@
 name: Flake
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - flake.nix
   schedule:
-#    - cron: '0 7 * * *'
-    - cron: '0 13 * * *' # Six hours after upstream
+    - cron: '0 7 * * *'
+#    - cron: '0 13 * * *' # Six hours after upstream
   workflow_dispatch:
 
 jobs:

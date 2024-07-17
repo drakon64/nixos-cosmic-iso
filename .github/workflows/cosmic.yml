@@ -1,17 +1,8 @@
 name: "COSMIC Live ISO"
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - flake.nix
-      - flake.lock
   pull_request:
     branches:
       - main
-    paths:
-      - flake.nix
-      - flake.lock
   workflow_dispatch:
 
 jobs:
