@@ -1,5 +1,7 @@
 name: "COSMIC Live ISO"
 on:
+  branches:
+    - main
   pull_request:
     branches:
       - main
