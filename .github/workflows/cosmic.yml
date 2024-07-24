@@ -1,10 +1,19 @@
 name: "COSMIC Live ISO"
 on:
-  branches:
-    - main
+  push:
+    branches:
+      - main
+    paths:
+      - flake.nix
+      - flake.lock
+      - .github/workflows/*.yml
   pull_request:
     branches:
       - main
+    paths:
+      - flake.nix
+      - flake.lock
+      - .github/workflows/*.yml
   workflow_dispatch:
 
 jobs:
