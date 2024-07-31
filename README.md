@@ -7,3 +7,5 @@ Downloads are available at [GitHub Actions](https://github.com/drakon64/nixos-co
 These ISO's are built from the NixOS Graphical Installer Base with the following modifications:
 * memtest86+ is not included
 * PulseAudio is disabled in favour of PipeWire
+* Flatpak is enabled
+  * This is required for COSMIC Store

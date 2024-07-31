@@ -48,6 +48,8 @@
                   cosmic-greeter.enable = true;
                 };
 
+                flatpak.enable = true;
+
                 xserver.excludePackages = [ pkgs.xterm ];
               };
 
