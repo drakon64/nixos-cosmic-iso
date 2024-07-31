@@ -12,7 +12,6 @@ on:
       - main
     paths:
       - flake.nix
-      - flake.lock
       - .github/workflows/*.yml
   workflow_dispatch:
 
