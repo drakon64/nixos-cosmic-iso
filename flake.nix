@@ -27,11 +27,7 @@
 
               hardware.pulseaudio.enable = lib.mkForce false;
 
-              isoImage = {
-                edition = lib.mkForce "cosmic";
-                makeEfiBootable = true;
-                makeUsbBootable = true;
-              };
+              isoImage.edition = lib.mkForce "cosmic";
 
               nixpkgs.hostPlatform = system;
 
