@@ -39,7 +39,7 @@ jobs:
         with:
           name: drakon64-nixos-cosmic-iso
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
-          extraPullNames: cosmic, drakon64-nixos-cosmic
+          extraPullNames: cosmic
 
       - env:
           SYSTEM: ${{ matrix.architecture.system }}
