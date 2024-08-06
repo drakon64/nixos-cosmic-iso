@@ -43,7 +43,7 @@ jobs:
 
       - env:
           SYSTEM: ${{ matrix.architecture.system }}
-        run: nix -vL build --system "$SYSTEM" .#cosmicIso.closure
+        run: nix build --system "$SYSTEM" .#cosmicIso.closure
 
       - run: |
           ISO_FILE=(result/iso/*.iso)
