@@ -24,7 +24,7 @@ jobs:
             runner: ubuntu-latest
             name: x86_64
           - system: aarch64-linux
-            runner: [ linux, ARM64, drakon64/github-actions-runner-aws, EC2-c7g.xlarge, EBS-30GB ]
+            runner: [ linux, ARM64, drakon64/github-actions-runner-aws, EC2-c8g.xlarge, EBS-30GB ]
             name: AArch64
 
     name: COSMIC ${{ matrix.architecture.name }} Live ISO
