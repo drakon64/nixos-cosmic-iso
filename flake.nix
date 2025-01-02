@@ -72,7 +72,7 @@
                       };
 
                       system.stateVersion = lib.trivial.release;
-                      virtualisation.virtualbox.guest.enable = lib.mkForce true;
+                      virtualisation.virtualbox.guest.enable = lib.mkForce pkgs.stdenv.hostPlatform.isx86;
                     }
                   )
                 ];
