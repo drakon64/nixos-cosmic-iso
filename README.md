@@ -9,3 +9,5 @@ These ISO's are built from the NixOS Graphical Installer Base with the following
 * PulseAudio is disabled in favour of PipeWire
 * Flatpak is enabled
   * This is required for COSMIC Store
+* VirtualBox guest support is enabled 
+* ZFS is disabled
