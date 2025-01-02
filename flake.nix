@@ -41,7 +41,7 @@
                     {
                       imports = [
                         nixos-cosmic.nixosModules.default
-                        "${builtins.toString modulesPath}/installer/cd-dvd/installation-cd-graphical-base.nix"
+                        "${modulesPath}/installer/cd-dvd/installation-cd-graphical-base.nix"
                       ];
 
                       boot.loader.grub.memtest86.enable = lib.mkForce false;
