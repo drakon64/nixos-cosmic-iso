@@ -46,7 +46,12 @@
 
                       boot.loader.grub.memtest86.enable = lib.mkForce false;
                       hardware.pulseaudio.enable = lib.mkForce false;
-                      isoImage.edition = lib.mkForce "cosmic";
+
+                      isoImage = {
+                        edition = lib.mkForce "cosmic";
+                        forceTextMode = true;
+                      };
+
                       nixpkgs.hostPlatform = system;
 
                       services = {
