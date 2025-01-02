@@ -44,7 +44,11 @@
                         "${modulesPath}/installer/cd-dvd/installation-cd-graphical-base.nix"
                       ];
 
-                      boot.loader.grub.memtest86.enable = lib.mkForce false;
+                      boot = {
+                        loader.grub.memtest86.enable = lib.mkForce false;
+                        supportedFilesystems.zfs = lib.mkForce false;
+                      };
+
                       hardware.pulseaudio.enable = lib.mkForce false;
 
                       isoImage = {
