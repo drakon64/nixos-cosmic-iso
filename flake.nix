@@ -50,12 +50,7 @@
                       };
 
                       hardware.pulseaudio.enable = lib.mkForce false;
-
-                      isoImage = {
-                        edition = lib.mkForce "cosmic";
-                        forceTextMode = true;
-                      };
-
+                      isoImage.edition = lib.mkForce "cosmic";
                       nixpkgs.hostPlatform = system;
 
                       services = {
