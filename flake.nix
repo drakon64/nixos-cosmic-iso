@@ -77,6 +77,7 @@
                       };
 
                       system.stateVersion = lib.trivial.release;
+                      virtualisation.virtualbox.guest.enable = lib.mkForce true;
                     }
                   )
                 ];
