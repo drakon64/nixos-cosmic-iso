@@ -66,7 +66,6 @@
                         };
 
                         flatpak.enable = true;
-
                         xserver.excludePackages = [ pkgs.xterm ];
                       };
 
