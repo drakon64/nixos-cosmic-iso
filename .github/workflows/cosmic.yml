@@ -33,11 +33,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: cachix/install-nix-action@v30
+      - uses: DeterminateSystems/nix-installer-action@v16
+        with:
+          source-url: https://install.lix.systems/lix/lix-installer-${{ matrix.architecture.system }}
+          diagnostic-endpoint: ""
 
-      - env:
+      - run: |
+          echo "extra-substituters = https://cosmic.cachix.org
+          extra-trusted-public-keys = cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" | sudo tee -a /etc/nix/nix.conf
+
+      - run: nix build --system "$SYSTEM" .#cosmicIso.closure
+        env:
           SYSTEM: ${{ matrix.architecture.system }}
-        run: nix build --system "$SYSTEM" .#cosmicIso.closure
 
       - run: |
           ISO_FILE=(result/iso/*.iso)
